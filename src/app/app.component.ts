@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { POKEMONS } from './mock-pokemon-list';
 import { Pokemon } from './pokemon';
+import { listDeTest } from './mock-list';
+import { listTest } from './list-test';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,7 @@ import { Pokemon } from './pokemon';
 export class AppComponent implements OnInit{
   pokemonList: Pokemon[] = POKEMONS;
   pokemonSelected: Pokemon | undefined;
+  listTests: listTest | undefined;
 
   ngOnInit(): void {
     console.table(this.pokemonList);
@@ -25,3 +28,4 @@ export class AppComponent implements OnInit{
     }
   }
 }
+
